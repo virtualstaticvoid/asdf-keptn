@@ -29,6 +29,7 @@ get_platform() {
 }
 
 get_arch() {
+  # TODO: add arm support
   [ "x86_64" = "$(uname -m)" ] && echo "amd64" || echo "386"
 }
 
