@@ -29,8 +29,20 @@ get_platform() {
 }
 
 get_arch() {
-  # TODO: add arm support
-  [ "x86_64" = "$(uname -m)" ] && echo "amd64" || echo "386"
+  local arch=$(uname -m)
+  case $arch in
+    amd64 | x86_64)
+      echo "amd64"
+      ;;
+    arm64)
+      echo "arm64"
+      ;;
+    arm)
+      echo "arm"
+      ;;
+    *)
+      echo ""
+  esac
 }
 
 get_download_url() {
