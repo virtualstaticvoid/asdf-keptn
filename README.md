@@ -8,6 +8,7 @@
 
 ```
 asdf plugin-add keptn https://github.com/virtualstaticvoid/asdf-keptn.git
+asdf install keptn latest
 ```
 
 ## Use
